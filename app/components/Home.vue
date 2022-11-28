@@ -14,7 +14,36 @@
       <GridLayout row="1">
         <StackLayout>
           <ListView height="100%" for="item in items">
-            
+            <v-template>
+              <GridLayout
+                paddingTop="10"
+                paddingBottom="10"
+                class="message bg-main t-14"
+                paddingLeft="15"
+                paddingRight="15"
+                rows="auto"
+                columns="auto, *"
+              >
+                <StackLayout class="v-center" col="1" paddingLeft="10">
+                  <GridLayout columns="*, auto, auto" orientation="horizontal">
+                    <Label class="t-16 font-bold">{{ item }} {{ item }}</Label>
+                    <Label col="1" marginLeft="10" class="t-12 text-gray">{{
+                      item
+                    }}</Label>
+
+                    <StackLayout
+                      marginLeft="10"
+                      col="2"
+                      width="12"
+                      height="12"
+                      borderRadius="12"
+                    ></StackLayout>
+                  </GridLayout>
+
+                  <Label class="t-15">{{ item }}</Label>
+                </StackLayout>
+              </GridLayout>
+            </v-template>
           </ListView>
         </StackLayout>
       </GridLayout>
